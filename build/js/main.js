@@ -54,7 +54,7 @@ console.log(user['mail']);
 const productName = 'laptop';
 const productPrice = 12300;
 const product = {
-    productName: 'laptop',
-    productPrice: 12300
+    productName,
+    productPrice
 };
 console.log(product);

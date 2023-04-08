@@ -83,9 +83,9 @@ console.log(user['mail'])
 const productName:string = 'laptop';
 const productPrice:number = 12300;
 
-const product = { //This is one way of doing it without using the variables above.
-    productName: 'laptop',
-    productPrice: 12300
+const product = { //This is the other way of doing it, using the variables above
+    productName, //we can just use the name of the variables above for setting object properties.
+    productPrice
 }
 
 console.log(product)
