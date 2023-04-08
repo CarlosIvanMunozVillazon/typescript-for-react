@@ -136,3 +136,23 @@ button2.addEventListener('click', ()=> {
 })
 
 document.body.append(button2)
+
+
+//INLINE ARROW FUNCTIONS
+
+//string numero booleano arreglo objeto
+
+const returnString = ():string => 'String returned.'
+const returnNumber = ():number => 69
+const returnBoolean = ():boolean => false
+
+type anyArray = string[] | number[] | boolean[]
+
+const returnArray = (): anyArray => ['hello', 'master', 'yoda']
+const returnObject = (): object => ({name: 'gonzi', age: 34})
+
+console.log(returnString())
+console.log(returnNumber())
+console.log(returnBoolean())
+console.log(returnArray())
+console.log(returnObject())

@@ -88,3 +88,15 @@ button2.addEventListener('click', () => {
     alert('button with arrow anonymous function');
 });
 document.body.append(button2);
+//INLINE ARROW FUNCTIONS
+//string numero booleano arreglo objeto
+const returnString = () => 'String returned.';
+const returnNumber = () => 69;
+const returnBoolean = () => false;
+const returnArray = () => ['hello', 'master', 'yoda'];
+const returnObject = () => ({ name: 'gonzi', age: 34 });
+console.log(returnString());
+console.log(returnNumber());
+console.log(returnBoolean());
+console.log(returnArray());
+console.log(returnObject());
