@@ -58,3 +58,4 @@ const product = {
     productPrice
 };
 console.log(product);
+//i'll continue working all my lessons from this point. Having multiple documents for this is stupid when having verision control

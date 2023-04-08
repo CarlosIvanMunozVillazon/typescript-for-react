@@ -89,3 +89,7 @@ const product = { //This is the other way of doing it, using the variables above
 }
 
 console.log(product)
+
+//i'll continue working all my lessons from this point. Having multiple documents for this is stupid when having verision control
+
+
