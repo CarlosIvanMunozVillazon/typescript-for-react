@@ -101,8 +101,12 @@ console.log(returnBoolean());
 console.log(returnArray());
 console.log(returnObject());
 //STRING LITERALS
+const backgroundColor1 = 'yellow';
+const textColor1 = 'green'; //we could concat this values to the props of style, which is very zzz
+const stringLiteralExample = `${backgroundColor1} fafafa ${textColor1}`;
+console.log(stringLiteralExample);
 const button3 = document.createElement('button');
 button3.innerText = 'button 3';
-button3.style.backgroundColor = 'red';
-button3.style.color = 'purple';
+button3.style.backgroundColor = `${backgroundColor1}`;
+button3.style.color = `${textColor1}`;
 document.body.append(button3);
