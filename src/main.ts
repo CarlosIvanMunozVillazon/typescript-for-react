@@ -106,7 +106,7 @@ console.log(function(){return 'starting...'}()) //anonymous function call, remem
 //another example: , this can also be done with none anonymous functions
 
 const button1 = document.createElement('button')
-button1.innerText = 'Press me'
+button1.innerText = 'button 1'
 
 button1.addEventListener('click', function () {
     alert('button1 clicked')
@@ -156,3 +156,13 @@ console.log(returnNumber())
 console.log(returnBoolean())
 console.log(returnArray())
 console.log(returnObject())
+
+
+//STRING LITERALS
+
+const button3 = document.createElement('button')
+button3.innerText = 'button 3'
+button3.style.backgroundColor = 'red'
+button3.style.color = 'purple'
+
+document.body.append(button3)
