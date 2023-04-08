@@ -73,3 +73,18 @@ button1.addEventListener('click', function () {
     alert('button1 clicked');
 });
 document.body.append(button1);
+//ARROW FUNCTIONS:
+const add1 = (a, b) => {
+    return a + b;
+};
+//equivalent regular function:
+//const add1 = function () {
+//
+//}
+//arrow functions can also be anonymous
+const button2 = document.createElement('button');
+button2.innerText = 'button 2';
+button2.addEventListener('click', () => {
+    alert('button with arrow anonymous function');
+});
+document.body.append(button2);
