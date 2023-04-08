@@ -59,3 +59,17 @@ const product = {
 };
 console.log(product);
 //i'll continue working all my lessons from this point. Having multiple documents for this is stupid when having verision control
+//ANONYMOUS FUNCTIONS:
+//functions that don't need a name
+function start() {
+    return 'starting...';
+}
+console.log(start()); //regular function call
+console.log(function () { return 'starting...'; }()); //anonymous function call, remember "()" are neccesary to execute the function
+//another example: , this can also be done with none anonymous functions
+const button1 = document.createElement('button');
+button1.innerText = 'Press me';
+button1.addEventListener('click', function () {
+    alert('button1 clicked');
+});
+document.body.append(button1);
