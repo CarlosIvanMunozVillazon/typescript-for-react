@@ -303,7 +303,8 @@ console.log(completeUser)
 
 
 //asyng, await, fetch
-//old fashion way of asyncronous coding.
+//for seeing the old fashion way of asyn code, go to the previous commit (19)
+
 interface post {
     userId:number,
     id: number,
@@ -314,18 +315,18 @@ interface post {
 
 const ul = document.createElement('ul')
 
-const data = fetch('https://jsonplaceholder.typicode.com/posts').then(function (data) {
-    // console.log(data) //here the data is readed, but not understandable
-    return data.json() //this is also asyncronous
-    }).then(function (data){
-        console.log(data)
-        data.forEach(function (postr:post) {
-            const li = document.createElement('li')
-            li.innerText = <string> (<unknown> postr.userId )
-            ul.append(li)
-        })
-        document.body.append(ul)
-    }
-    )
+async function loadDataTest () {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+    const data = await response.json()
 
-//console.log(data)
+    data.forEach(function (postr:post) {
+        const li = document.createElement('li')
+        li.innerText = postr.title
+        ul.append(li)
+    })
+
+    document.body.append(ul)
+
+}
+
+loadDataTest() //the function must be executed.
