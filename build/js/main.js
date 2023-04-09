@@ -111,3 +111,79 @@ button3.innerText = 'button 3';
 button3.style.backgroundColor = `${validationVariable ? backgroundColor1 : 'black'}`;
 button3.style.color = `${textColor1}`;
 document.body.append(button3);
+//ARRAY METHODS
+let names = ['ryan', 'vladimir', 'maria'];
+//traditional for
+for (let k = 0; k < names.length; k++) {
+    console.log(names[k]);
+}
+//for each
+names.forEach(function (k) {
+    k += '襣';
+    console.log(k);
+});
+//map function
+const newNames = names.map(function (name) {
+    if (name === 'ryan') {
+        return name;
+    }
+    else {
+        return '⍇';
+    }
+});
+console.log(newNames);
+//map is very useful cause allows us to modify values within the array and store those modifications in a new one
+const newNames1 = names.map(function (name) {
+    return `F*cking ${name} hello !!!`;
+});
+console.log(newNames1);
+//There are many functions within the Array class that we can use in order to iterating over an array. Another example would be
+//find function
+//find
+const foundName = names.find(function (name) {
+    if (name === 'vladimir') {
+        let h = `${name} putin`;
+        return h;
+    }
+});
+console.log(foundName);
+//filter
+const filteredNames = names.filter(function (name) {
+    if (name === 'vladimir') {
+        return name;
+    }
+});
+const filteredNames1 = names.filter(function (name) {
+    if (name !== 'vladimir') {
+        return name;
+    }
+});
+console.log(filteredNames);
+console.log(filteredNames1);
+//concat
+const anotherNames = ['antony', 'david', 'vinicius'];
+const anotherNames1 = ['karim', 'federico'];
+const concatNames = anotherNames.concat(anotherNames1);
+console.log(anotherNames);
+console.log(anotherNames1);
+console.log(concatNames);
+//spread operator
+const numbers = [1, 2, 3, 45, 213, 35];
+const numbers1 = [36, 165, 65, 87];
+console.log(...numbers);
+console.log(...numbers, ...numbers1);
+const numbers2 = [...numbers, ...numbers1];
+console.log(numbers2);
+console.log(...numbers2);
+const user1 = {
+    name: 'james',
+    lastName: 'johnson'
+};
+const userInformation = {
+    address: 'main street 456',
+    country: 'peru'
+};
+const completeUser = Object.assign(Object.assign({}, user1), userInformation);
+console.log(user1);
+console.log(userInformation);
+console.log(completeUser);
