@@ -187,3 +187,10 @@ const completeUser = Object.assign(Object.assign({}, user1), userInformation);
 console.log(user1);
 console.log(userInformation);
 console.log(completeUser);
+//optional chaining
+//const thing = {
+//    name: 'robert',
+//    age: 12,
+//}
+//
+//console.log(thing.location?.place)
