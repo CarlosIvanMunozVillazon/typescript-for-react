@@ -302,3 +302,30 @@ console.log(completeUser)
 //console.log(thing.location?.place)
 
 
+//asyng, await, fetch
+//old fashion way of asyncronous coding.
+interface post {
+    userId:number,
+    id: number,
+    title:string,
+    body:string,
+
+}
+
+const ul = document.createElement('ul')
+
+const data = fetch('https://jsonplaceholder.typicode.com/posts').then(function (data) {
+    // console.log(data) //here the data is readed, but not understandable
+    return data.json() //this is also asyncronous
+    }).then(function (data){
+        console.log(data)
+        data.forEach(function (postr:post) {
+            const li = document.createElement('li')
+            li.innerText = <string> (<unknown> postr.userId )
+            ul.append(li)
+        })
+        document.body.append(ul)
+    }
+    )
+
+//console.log(data)

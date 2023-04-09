@@ -187,10 +187,17 @@ const completeUser = Object.assign(Object.assign({}, user1), userInformation);
 console.log(user1);
 console.log(userInformation);
 console.log(completeUser);
-//optional chaining
-//const thing = {
-//    name: 'robert',
-//    age: 12,
-//}
-//
-//console.log(thing.location?.place)
+const ul = document.createElement('ul');
+const data = fetch('https://jsonplaceholder.typicode.com/posts').then(function (data) {
+    // console.log(data) //here the data is readed, but not understandable
+    return data.json(); //this is also asyncronous
+}).then(function (data) {
+    console.log(data);
+    data.forEach(function (postr) {
+        const li = document.createElement('li');
+        li.innerText = postr.userId;
+        ul.append(li);
+    });
+    document.body.append(ul);
+});
+//console.log(data)
