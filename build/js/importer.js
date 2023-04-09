@@ -4,3 +4,5 @@ let number1 = 12;
 let number2 = 65;
 const result2 = moduleTest.add1(number1, number2);
 console.log(result2);
+console.log(moduleTest.multiply(number1, number2));
+console.log(moduleTest.value);
